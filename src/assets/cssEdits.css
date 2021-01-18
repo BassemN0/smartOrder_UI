@@ -1,0 +1,82 @@
+/* global css rules and variables */
+
+/* font registeration */
+@import url('../font/font-face.css');
+
+*{
+  font-family: 'Tajawal', sans-serif;
+}
+
+/* fading effect for router transition */
+.fade-enter-active, .fade-leave-active {
+  transition: opacity .5s;
+}
+.fade-enter, .fade-leave-to {
+  opacity: 0;
+}
+
+/* my root variables */
+:root{
+  --my-black : #1b1b1b;
+  --my-white : #ffffff;
+  --my-lightest : #e5e5e5;
+  --my-light : #fca311;
+  --my-dark : #f3f3f3;
+  --b-raduis : 10px;
+  --b-raduis-b : 15px;
+}
+
+/* body & app styles */
+body{
+  background-image: linear-gradient(rgb(0 0 0 / 45%),rgb(0 0 0 / 45%)), url('./media/bg3.jpg') !important;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+#app {
+  font-family: Avenir, Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-align: center;
+  color: #2c3e50;
+}
+
+
+
+/* some globally used calsses */
+@import url('./componentsCss/globalStyles.css');
+
+/* media Queries */
+/* @import url('./componentsCss/mediaQueries.css'); */
+
+/* 
+    styling the app pages in their appearing order   
+*/
+
+/* registeration page */
+/* @import url('./componentsCss/registrationStyles.css'); */
+
+/* home page */
+/* @import url('./componentsCss/homeStyle.css'); */
+
+/* menu-sections */
+/* @import url('./componentsCss/menu/menuSections.css'); */
+
+/* menu-one section */
+  /* menu-sections carousel */
+  /* @import url('./componentsCss/menu/menuSectionCarousel.css'); */
+  /* menu-one item& section big name */
+  /* @import url('./componentsCss/menu/menuOneItem.css');   */
+
+/* feed-back page */
+/* @import url('./componentsCss/registrationStyles.css'); */
+
+/* header& footer styles */
+/* @import url('./componentsCss/headerAndFooter.css'); */
+
+/* logo-container styles */
+/* @import url('./componentsCss/logoContainer.css'); */
+
+/* call-waiter & order-check styles */
+/* @import url('./componentsCss/callWaiterOrderCheck.css'); */

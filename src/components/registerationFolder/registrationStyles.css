@@ -1,0 +1,18 @@
+.reg-form{
+  color: #fff!important;
+}
+.reg-form form input{
+  display: block;
+  padding: 10px;
+  border: none;
+  transition: all .5s ease-in-out;
+}
+.reg-btn{
+  padding: 10px 25px;
+  display: block;
+  color: #fff!important;
+}
+.submit-btn{
+  margin-top: 30px;
+}
+
