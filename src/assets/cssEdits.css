@@ -27,13 +27,39 @@
 }
 
 /* body & app styles */
-body{
+
+/* body{
+  min-height: 100vh;
   background-image: linear-gradient(rgb(0 0 0 / 45%),rgb(0 0 0 / 45%)), url('./media/bg3.jpg') !important;
   background-attachment: fixed;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
+} */
+
+.back-ground{
+  z-index: 0;
+  position: fixed;
+  height: 100vh;
+  width: 100vw;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  /* background-image: linear-gradient(rgb(0 0 0 / 45%),rgb(0 0 0 / 45%)), url('./media/25192f4eda302e18aece7516878ae9e5.jpg') !important; */
 }
+
+.back-ground img{
+  width: 100vw;
+  height: 100vh;
+  filter: brightness(50%);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -42,41 +68,27 @@ body{
   color: #2c3e50;
 }
 
-
+#to-top{
+  transition: all .5s ease-in-out;
+  opacity: 0;
+  background-image: url(./media/right-arrow.svg);
+  background-size: 100%;
+  background-repeat: no-repeat;
+  position: fixed;
+  bottom: 115px;
+  right: 20px;
+  height: 35px;
+  width: 35px;
+  transform: rotate(-90deg);
+  z-index: 4;
+}
 
 /* some globally used calsses */
 @import url('./componentsCss/globalStyles.css');
 
-/* media Queries */
-/* @import url('./componentsCss/mediaQueries.css'); */
-
-/* 
-    styling the app pages in their appearing order   
-*/
-
-/* registeration page */
-/* @import url('./componentsCss/registrationStyles.css'); */
-
-/* home page */
-/* @import url('./componentsCss/homeStyle.css'); */
-
-/* menu-sections */
-/* @import url('./componentsCss/menu/menuSections.css'); */
-
-/* menu-one section */
-  /* menu-sections carousel */
-  /* @import url('./componentsCss/menu/menuSectionCarousel.css'); */
-  /* menu-one item& section big name */
-  /* @import url('./componentsCss/menu/menuOneItem.css');   */
-
-/* feed-back page */
-/* @import url('./componentsCss/registrationStyles.css'); */
-
-/* header& footer styles */
-/* @import url('./componentsCss/headerAndFooter.css'); */
-
-/* logo-container styles */
-/* @import url('./componentsCss/logoContainer.css'); */
-
-/* call-waiter & order-check styles */
-/* @import url('./componentsCss/callWaiterOrderCheck.css'); */
+/* media queries */
+@media(min-width:768px){
+  .item-img img{
+    height: 235px!important;
+  }
+}

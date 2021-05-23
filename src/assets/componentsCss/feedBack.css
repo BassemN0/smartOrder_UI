@@ -1,0 +1,65 @@
+.feedback {
+  padding-bottom: 30px;
+  color: var(--my-white);
+}
+.feedback form{
+  display: flex;
+  flex-direction: column;
+  padding: 0 20px;
+}
+.rating-container {
+  display: flex;
+  margin: 15px auto;
+}
+.rating-container p {
+  width: 50%;
+  margin: auto;
+}
+.rating-container output {
+  width: 85%;
+  border: none;
+}
+.feedback form input, .feedback form textarea{
+  display: block;
+  padding: 15px;
+  border-radius: 1.75rem;
+  border: none;
+  resize: none;
+  transition: all .5s ease-in-out;
+}
+.fed-er{
+  position: absolute;
+  transition: all .5s linear;
+  opacity: 0;
+  z-index: 9;
+  bottom: 75px;
+  left: 50%;
+  transform: translateX(-50%);
+  margin: 0;
+  font-size: 15px;
+  width: 100%;
+  background: red;
+  padding: 2px;
+}
+
+.visible{
+  opacity: 1!important;
+}
+.my-btn{
+  display: block;
+  padding: 10px 25px;
+  border: none;
+}
+.my-btn2{
+  margin: auto;
+}
+.black-bg{
+  background-color: var(--my-black)!important;
+}
+
+.fade-enter-active, .fade-leave-active {
+  transition: opacity .5s;
+}
+.fade-enter, .fade-leave-to {
+  opacity: 0;
+}

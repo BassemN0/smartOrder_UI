@@ -1,0 +1,19 @@
+.carousel-link{
+  padding: 10px 0;
+  margin: 5px;
+  border-radius: 10px;
+  color: var(--my-dark)!important;
+}
+.carousel-link p {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 0;
+  height: 45px;
+}
+.carousel-link img{
+  width: 60px;
+  height: 60px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}

@@ -1,55 +1,53 @@
-import App from './App.vue';
-import register from './components/registerationFolder/register.vue';
-import home from './components/homeFolder/home.vue';
-import menuLayout from './components/menuFolder/menuLayout.vue'
-import menuSections from './components/menuFolder/menuSectionsFolder/menuSections.vue'
-import menuDetails from './components/menuFolder/menuDetailsFolder/menuDetails.vue'
-import feedback from './components/feedbackFolder/feedback'
-import specials from './components/specialOffers/specialOffers.vue'
-// import test from './components/test.vue';
-// import item from './components/item.vue';
+import App from "./App.vue";
+import register from "./components/register.vue";
+import home from "./components/home.vue";
+import menuLayout from "./components/menuFolder/menuLayout.vue";
+import menuSections from "./components/menuFolder/menuSections.vue";
+import menuDetails from "./components/menuFolder/menuDetails.vue";
+import specials from "./components/menuFolder/specialOffers.vue";
+import feedback from "./components/feedback";
 
 export const routes = [
   {
-    path: '/:id',
+    path: "/table/:id",
     component: App,
-    name: 'الابلكيشن',
+    name: "الابلكيشن",
     children: [
       {
-        path: 'register',
-        component : register,
-        name : 'سجل لدينا',
+        path: "register",
+        component: register,
+        name: "سجل لدينا"
       },
       {
-        path: 'home',
+        path: "home",
         component: home,
-        name: 'الرئيسية'
+        name: "الرئيسية"
       },
       {
-        path: 'menu',
+        path: "menu",
         component: menuLayout,
-        children : [
+        children: [
           {
-            path: '',
+            path: "",
             component: menuSections,
-            name: 'اقسام القائمة'
+            name: "اقسام القائمة"
           },
           {
-            path: ':sectionId',
-            component: menuDetails,
-          },
+            path: "meals/:sectionId",
+            component: menuDetails
+          }
         ]
       },
       {
-        path: 'feedback',
-        component: feedback,
-        name: 'التقييم'
+        path: "specials",
+        component: specials,
+        name: "العروض الخاصه"
       },
       {
-        path: 'specials',
-        component: specials,
-        name: 'العروض الخاصه'
+        path: "feedback",
+        component: feedback,
+        name: "التقييم"
       }
     ]
-  },
-] 
+  }
+];
