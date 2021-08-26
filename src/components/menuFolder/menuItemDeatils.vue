@@ -8,7 +8,7 @@
       <div class="item-img">
         <img
           v-if="singleItem.image"
-          :v-lazy="singleItem.image"
+          v-lazy="singleItem.image"
           :alt="singleItem.name"
         />
         <img src="@/assets/media/logo.png" :alt="singleItem.name" v-else />

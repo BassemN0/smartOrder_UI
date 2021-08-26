@@ -17,7 +17,7 @@ function getCookie(cname) {
 }
 
 const instance = axios.create({
-  baseURL: "http://192.168.1.178:1000",
+  baseURL: "http://localhost:1000",
   headers: {
     "Content-Type": "application/json",
     Accept: "application/json"

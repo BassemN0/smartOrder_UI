@@ -2,7 +2,7 @@
 import Vue from "vue";
 import App from "./App.vue";
 
-// importing and using lazy-load
+// using lazy-load
 import VueLazyload from "vue-lazyload";
 Vue.use(VueLazyload);
 
@@ -46,20 +46,13 @@ import appError from "./components/error.vue";
 import appLoading from "./components/loading.vue";
 import appRights from "./components/rights.vue";
 
-// call waiter btn
+// using them
 Vue.component("callWaiter", callAWaiter);
-// order check btn
 Vue.component("orderCheck", orderACheck);
-
-// header component
 Vue.component("app-header", appHeader);
-// footer component
 Vue.component("app-footer", appFooter);
-// error component
 Vue.component("app-error", appError);
-// loading component
 Vue.component("app-loading", appLoading);
-// rights component
 Vue.component("app-rights", appRights);
 
 // regestring event bus

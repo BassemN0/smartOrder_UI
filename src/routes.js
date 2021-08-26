@@ -1,4 +1,5 @@
-import App from "./App.vue";
+// import App from "./App.vue";
+import appLayout from "./components/appLayout";
 import register from "./components/register.vue";
 import home from "./components/home.vue";
 import menuLayout from "./components/menuFolder/menuLayout.vue";
@@ -10,7 +11,7 @@ import feedback from "./components/feedback";
 export const routes = [
   {
     path: "/table/:id",
-    component: App,
+    component: appLayout,
     name: "الابلكيشن",
     children: [
       {

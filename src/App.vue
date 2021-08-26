@@ -4,11 +4,7 @@
       <img src="@/assets/media/background.jpg" />
     </div>
     <div style="position: relative; z-index: 5">
-      <keep-alive>
-        <transition name="fade" mode="out-in">
-          <router-view></router-view>
-        </transition>
-      </keep-alive>
+      <appLayout></appLayout>
     </div>
     <div id="to-top" @click="scrollToTop"></div>
   </div>
@@ -17,6 +13,7 @@
 <script>
 // import centralData from './main'
 import axios from "axios";
+import appLayout from "./components/appLayout";
 
 export default {
   name: "App",
@@ -27,7 +24,7 @@ export default {
   },
   created() {
     axios
-      .put(`http://192.168.1.178:1000/api/table/tableLogin/${this.tableId}`)
+      .put(`http://localhost:1000/api/table/tableLogin/${this.tableId}`)
       .then((res) => {
         if (res.data.statusCode == 200) {
           this.$cookies.set("idToken", res.data.token);
@@ -55,6 +52,7 @@ export default {
       });
     },
   },
+  components: { appLayout },
 };
 </script>
 
